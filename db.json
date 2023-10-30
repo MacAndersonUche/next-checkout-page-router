@@ -1,0 +1,7 @@
+{
+  "products": [
+    { "id": 1, "name": "table", "isAvailable": true, "qty": 1, "price": 5.0 },
+    { "id": 2, "name": "chair", "isAvailable": true, "qty": 1, "price": 10.0 },
+    { "id": 3, "name": "wardrobe", "isAvailable": true, "qty": 1, "price": 7.5 }
+  ]
+}
