@@ -18,6 +18,7 @@ export const initialState = {
   products: [],
   totalQty: 0,
   totalPrice: 0.0,
+  totalInStock: 0,
 };
 
 interface Props {

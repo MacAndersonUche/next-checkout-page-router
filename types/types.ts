@@ -10,6 +10,7 @@ export interface State {
   products: FetchedProduct[];
   totalQty: number;
   totalPrice: number;
+  totalInStock: number;
 }
 
 export type Action =
