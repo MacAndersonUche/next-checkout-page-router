@@ -1,5 +1,5 @@
 export interface FetchedProduct {
-  id: string;
+  id: number;
   name: string;
   isAvailable: boolean;
   price: number;

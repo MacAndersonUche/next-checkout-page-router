@@ -2,6 +2,13 @@ import { useGlobalContext } from "@/context/provider";
 
 function Displayed() {
   const ctx = useGlobalContext();
+
+  const handleAdd = (id: number) => {
+    ctx.dispatch({ type: "add_qty", productId: id });
+  };
+  const handleRemove = (id: number) => {
+    ctx.dispatch({ type: "remove_qty", productId: id });
+  };
   return (
     <div className="grid grid-cols-3 gap-4">
       {ctx.state.products &&
@@ -16,9 +23,13 @@ function Displayed() {
             </h4>
             <p>Price: £{product.price}</p>
             <div>
-              <button className="mx-1">+</button>
+              <button className="mx-1" onClick={() => handleAdd(product.id)}>
+                +
+              </button>
               {product.qty}
-              <button className="mx-1">-</button>
+              <button className="mx-1" onClick={() => handleRemove(product.id)}>
+                -
+              </button>
             </div>
           </div>
         ))}
